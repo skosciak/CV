@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Simply page with purpose of showing my abilities">
+        <link rel="icon" href="Assets/IG.png">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <title>Sebastian Kościak - Project Page</title>
+    </head>
+    <body>
+        <header id = "header">
+            <nav id = "navbar">
+                <div id = "menu">
+                    <p>MENU</p>
+                    <ul>
+                        <li><a class = 'menu-tags' href = #about-me>About</a></li>
+                        <li><a class = 'menu-tags' href = #my-works>My projects</a></li>
+                        <li><a class = 'menu-tags' href = #contact>Contact me!</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div id = "presentation">
+                <img src = "Assets/IG.png" alt = "LOGO" >
+                <div id = "title">
+                    <h1>Hi! I'm Sebastian Kościak</h1>
+                    <h3>Welcome to my project site</h3>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div id ="bg">
+                <section id = "about-me">
+                    <h1>A bit about me</h3>
+                    <p>I graduated from IT School named SCI in Szczecin, Poland and got an IT Specialist title. While in middle school I found out that creative work is quite fun for me and it leads me to create videos for my channel, Anime24.pl and IGN Polska. I currently work in the car parts industry as an employee responsible for paperwork and as a complaints department employee. My passion for programming started to unveil to the point where I couldn't stop doing it. Webdesign and frontend appear to interest me a lot and gave me a lot of fun while learning. </p>
+                    <p>My goals for now are to learn Node.js and SASS. In the future, I would like to learn PHP and React.</p>
+                    <div id = 'container-skills'>
+                        <ul id = "skills-soft" header = "Software Skills">
+                            <li>Brackets</li>
+                            <li>Premiere Pro</li>
+                            <li>After Effects</li>
+                            <li>Visual Studio Code</li>
+                        </ul>
+                        <ul id = "skills-technologies" header = "Technologies">
+                            <li>CSS</li>
+                            <li>HTML</li>
+                            <li>JSON</li>
+                            <li>Javascript</li>
+                        </ul>
+                        <div id = 'container-languages'>
+                            <ul id = "languages" header = "Languages">
+                                <li>Polish - native</li>
+                                <li>English - B2</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section id = "my-works">
+                    <div id = "grid-works">
+                        <div id = "card_element" class = "hover">
+                            <h4 class = "grid_title">Card Element</h4>
+                            <div class = "bg" id = "bg_card"></div>
+                        </div>
+                        <div id = "tech_doc" class = "hover">
+                            <h4 class = "grid_title">Tech Doc</h4>
+                            <div class = "bg" id = "bg_tech"></div>
+                        </div>
+                        <div id = "tribute_page" class = "hover">
+                            <h4 class = "grid_title">Tribute Page</h4>
+                            <div class = "bg" id = "bg_tribute"></div>
+                        </div>
+                        <div id = "simple_game_javascript" class = "hover">
+                            <h4 class = "grid_title">Simple Game Javascript</h4>
+                            <div class = "bg" id = "bg_simple_game"></div>
+                        </div>
+                        <div id = "calculator_javascript" class = "hover">
+                            <h4 class = "grid_title">Calculator  Javascript</h4>
+                            <div class = "bg" id = "bg_calculator"></div>
+                        </div>
+                        <div id = "survey_form" class = "hover-big">
+                            <h4 class = "grid_title">Survey Form</h4>
+                            <div class = "bg" id = "bg_survey"></div>
+                        </div>
+                        <div id = "popup_javascript" class = "hover">
+                            <h4 class = "grid_title">Popup  Javascript</h4>
+                            <div class = "bg" id = "bg_popup"></div>
+                        </div>
+                    </div>
+                </section>
+                <section id = "contact">
+                    <div>
+                        <div id = 'contact-wrapper'>
+                             <img src = 'Assets/pngegg.png' alt = 'Wyślij email'>
+                             <a href = "mailto: sebastian.kosciak@gmail.com"><p>Contact me at:<br> sebastian.kosciak@gmail.com</p></a>
+                        </div>
+                        <div id = 'slider'></div>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <p id = "credits">Made by Sebastian Kościak 08.2022</p>
+        </footer>
+    </body>
+    <script type = 'text/javascript'>
+        document.addEventListener('DOMContentLoaded', init);
+
+        function init() {
+            const LinksToSite = {
+                landing_page: document.getElementById('card_element'),
+                tech_doc: document.getElementById('tech_doc'),
+                tribute_page: document.getElementById('tribute_page'),
+                survey_form: document.getElementById('survey_form'),
+                calculator: document.getElementById('calculator_javascript'),
+                popup: document.getElementById('popup_javascript'),
+                game: document.getElementById('simple_game_javascript')
+            };
+            LinksToSite.landing_page.addEventListener('click', () => {
+                location.href = './card_element/index.html'
+            });
+            LinksToSite.tech_doc.addEventListener('click', () => {
+                location.href = './tech_doc/index.html';
+            });
+            LinksToSite.tribute_page.addEventListener('click', () => {
+                location.href = './tribute_page/tribute-page.html';
+            });
+            LinksToSite.survey_form.addEventListener('click', () => {
+                location.href = './survey_form/survey-form.html';
+            });
+            LinksToSite.calculator.addEventListener('click', () => {
+                location.href = './js_elements_kalkulator/index.html';
+            });
+            LinksToSite.popup.addEventListener('click', () => {
+                location.href = './js_elements_popup/index.html';
+            });
+            LinksToSite.game.addEventListener('click', () => {
+                location.href = './simple_game/index.html'
+            });
+        };
+    </script>
+</html>
